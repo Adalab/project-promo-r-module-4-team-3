@@ -1,0 +1,53 @@
+//Color
+$colorIcons: #e17334;
+$colorWhite: #ffffff;
+$colorWhiteTwo: #d8d8d8;
+$colorSubtitle: #114e4e;
+$colorHoldplacer:#c5c5c5;
+$colorGreyText: #54585a;
+$colorBorder: #a2deaf;
+
+//color Adalabs
+$colorSecondary:#476b15;
+
+
+//colores para paletas
+$colorAqua2:#438792;
+$colorDarkRed: #420101;
+$colorRed: #bd1010;
+$colorOrange: #e95626;
+$colorBlueGrey: #3e5b65;
+$colorBeige: #eab052;
+$colorLightBlueGrey: #a0c0cf;
+
+//Font
+$font-familyPrimary: 'Open Sans', sans-serif;
+$font-familySecondary: 'Montserrat', sans-serif;
+
+
+
+$defaultFontSize:16;
+@function rem($pixels) {
+    @return ($pixels/$defaultFontSize*1rem);
+}
+
+//Mixins
+@mixin t($fontSize,$fontHeight) {
+    font-size: $fontSize;
+    line-height: $fontHeight;
+}
+/* ejemplo:
+para escribir en css:
+font-size: 18px;
+line-height:20px;
+
+USANDO LA FC REM
+font-size: rem(18);
+line-height: rem(20);
+
+USANDO EL @MIXIN
+@include t(rem(18),rem(20));
+
+*/
+
+

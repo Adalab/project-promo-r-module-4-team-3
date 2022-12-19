@@ -1,0 +1,64 @@
+
+.form__contact--icon {
+  color: $colorIcons;
+  font-size: rem(20);
+}
+.form__contact--arrow1 {
+  width: 16px;
+  height: 18px;
+}
+.form__contact--arrow2 {
+  width: 16px;
+  height: 18px;
+}
+.form__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+  margin-bottom: 30px;
+
+  &--label {
+    margin-top: 1rem;
+    font-size: 14px;
+    color: $colorSecondary;
+    font-weight: normal;
+  }
+  &--input {
+    padding: 5px 120px 7px 9px;
+    border: 1px solid $colorBorder;
+    margin-top: 0.3rem;
+    padding-right: 3px;
+    height: 30px;
+    width: 280px;
+  }
+  &--div {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  &--btn {
+    background-color: $colorIcons;
+    color: $colorWhite;
+    border-radius: 3px;
+    font-size: 14px;
+    padding: 3px 22px 7px;
+    border: none;
+    width: 140px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  &--square {
+    width: rem(30);
+    height: 30px;
+    border: 1px solid $colorBorder;
+    background-size: cover;
+  }
+}
+@media all and (min-width: 768px) {
+  .form__contact--input {
+    width: 329px;
+  }
+}

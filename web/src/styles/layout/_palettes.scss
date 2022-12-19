@@ -1,0 +1,27 @@
+
+.palette1 {
+
+    .nameCardColor {color: $colorSubtitle;}
+    .titleWrapColor {border-left:solid 5px #438792;}
+    .iconColor {
+            border: solid 2px $colorBorder;
+            color: $colorSubtitle;}
+} 
+.palette2 {
+
+    .nameCardColor {color: $colorDarkRed;}
+    .titleWrapColor {border-left:solid 5px $colorRed}
+    .iconColor {
+            border: solid 2px $colorOrange;
+            color: $colorDarkRed;}
+}
+
+.palette3 {
+
+    .nameCardColor {color: $colorBlueGrey;}
+    .titleWrapColor {border-left:solid 5px $colorBeige}
+    .iconColor {
+            border: solid 2px $colorLightBlueGrey;
+            color: $colorBlueGrey;}
+}
+

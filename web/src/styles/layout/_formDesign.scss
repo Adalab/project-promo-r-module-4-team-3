@@ -1,0 +1,64 @@
+.palettes {
+    display: flex;
+    justify-content: space-between;
+    padding: 22px 0px 30px 19px;
+   
+    &__text {
+        text-transform: uppercase;
+    }
+}
+
+.colorContainer {
+    width: 120px;
+    height: 25px;
+    display: flex;
+    margin-bottom: 20px;
+
+    .inputColor {
+        margin-right: 20px; 
+        cursor: pointer;
+
+    }
+
+    .colorBox {
+        width: 30px ;
+        height: 25px;
+    }
+
+    .aqua-1{background-color:$colorSubtitle;}
+    .aqua-2{background-color: $colorAqua2;}
+    .aqua-3{background-color: $colorBorder;}
+    
+    .red-1{background-color: $colorDarkRed;}
+    .red-2{background-color: $colorRed;}
+    .red-3{background-color: $colorOrange;}
+    
+    .blueandbeige-1{background-color: $colorBlueGrey;}
+    .blueandbeige-2{background-color: $colorBeige;}
+    .blueandbeige-3{background-color: $colorLightBlueGrey;}
+}
+input[type='radio']:after {
+    width: 5px;
+    height: 5px;
+    border-radius: 15px;
+    top: 5px;
+    left: 1px;
+    position: relative;
+    background-color:white;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+input[type='radio']:checked:after {
+    width: 14px;
+    height: 14px;
+    border-radius: 15px;
+    left: -2px;
+    position: relative;
+    background-color:$colorSecondary;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}

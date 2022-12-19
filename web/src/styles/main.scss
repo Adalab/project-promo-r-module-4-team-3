@@ -1,0 +1,23 @@
+@import './core/reset';
+@import './core/variables';
+
+@import './layout/cardDisplay';
+@import './layout/createDisplay';
+@import './layout/footer';
+@import './layout/form';
+@import './layout/formDesign';
+@import './layout/formFill';
+@import './layout/formShare';
+@import './layout/headerCreate';
+@import './layout/legendDisplay.scss';
+@import './layout/palettes.scss';
+
+@import './pages/index';
+
+:root {
+  font-family: $font-familyPrimary;
+}
+
+.hide {
+  display: none;
+}

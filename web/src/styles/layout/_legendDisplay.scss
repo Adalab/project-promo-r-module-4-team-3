@@ -1,0 +1,33 @@
+.fieldset {
+    color: $colorSecondary;
+    border-bottom: solid 1px $colorWhiteTwo;
+  }
+
+.containerLegend {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 7px;
+    cursor: pointer;
+    @media all and (min-width:768px){
+        width: 330px; 
+    }
+    .legend__tab {
+        display: flex;
+        &--icon {
+            color: $colorIcons;
+            font-size: rem(20);
+        }
+        &--title {
+            text-transform: uppercase;
+            font-size: rem(18);
+            font-weight: 600;
+            padding-left: 10px;
+        }
+    }
+    .legend__tab--arrow {
+        width: 16px;
+        height: 18px;
+    }
+}

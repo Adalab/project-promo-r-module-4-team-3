@@ -1,0 +1,99 @@
+.cardDisplay {
+    background: linear-gradient(#bfcdd0, #dde9ed);   
+    padding:38px 35px 40px 45px;
+    @media all and (min-width:768px) {
+        padding:180px 44px 40px 45px;
+        border-radius: 6px;
+    }
+    @media all and (min-width:1024px) {
+        padding:173px 44px 40px 45px;
+        border-radius: 6px;
+    }
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    &__reset {
+        position:relative;
+        right: 84px;
+        text-decoration: none;
+        background-color: transparent;
+        width: 75px;
+        height: 30px;
+        margin-bottom: 20px;
+        border:solid 2px $colorIcons;
+        border-radius: 15px;
+        font-family: $font-familyPrimary;
+        @include t(rem(12), rem(20));
+        font-weight: 600;
+        text-transform: uppercase;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        gap:8px;
+        color:$colorIcons;
+        cursor: pointer;
+        }
+    &__card {
+        background-color:$colorWhite;
+        width: 240px;
+        padding: 21px 0px 12px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 2px;
+        /*shadow : pxX pxY  blur color/opacidad20% */
+        box-shadow: 0 1px 10px  rgba(0, 0, 0, 0.20);
+        &--name {
+            @include t(rem(18),rem(20));
+            font-family:$font-familySecondary;
+            font-weight: 700;
+            cursor: default;
+                 }
+        &--profesion {
+                color: $colorGreyText;
+                @include t(rem(16),rem(20));
+                font-family:$font-familySecondary;
+                cursor: default;
+                }
+        &--photo {
+            width: 240px;
+            height: 200px;
+            background:white url(../../images/photoexample2.png) no-repeat scroll center;
+            background-size: cover;
+            object-fit: cover;
+        }
+        &--iconList {
+            display:flex;
+            gap:10px;
+            margin: 10px 10px 0 20px;
+            font-size: 18px;
+            list-style: none;
+        }
+    }
+}
+.cardListElement{
+    text-decoration: none;
+    &__icon {
+        border: solid 2px;
+        height: 32px;
+        width: 32px;
+        border-radius:16px;
+        padding:7px 7px;
+        display: flex;
+        text-decoration: none;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer; 
+        }
+    }
+
+
+.titleWrap {
+    margin-bottom: 10px;
+    padding-left: 15px;//20-5del borde
+    }
+
+.not-active {
+    pointer-events: none; 
+    cursor: default; 
+}

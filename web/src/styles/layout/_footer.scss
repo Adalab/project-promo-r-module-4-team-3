@@ -1,0 +1,35 @@
+.footer {
+  background-color: $colorWhite;
+  padding: 0px 40px;
+  height: 15vh;
+  min-height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @media all and (min-width: 768px) {
+    height: 8vh;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+  }
+ 
+
+  &__text {
+    @include t(rem(14), rem(20));
+    text-decoration: none;
+    color: $colorSecondary;
+    opacity: 0.8;
+    @media all and (min-width: 768px) {
+    }
+  }
+
+  &__logo {
+    width: 103px;
+    height: auto;
+    margin-top:12px;
+    @media all and (min-width: 768px) {
+      margin-top:0;
+    }
+  }
+}

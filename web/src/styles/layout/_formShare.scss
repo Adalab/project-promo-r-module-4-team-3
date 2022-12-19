@@ -1,0 +1,88 @@
+.shareTwitter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__buttoncreate {
+    color: $colorWhite;
+    border-radius: 12px;
+    width: 199px;
+    height: 50px;
+    margin-block: 30px;
+    cursor: pointer;
+
+    &--icon {
+      font-size: rem(22);
+      margin-right: 9px;
+    }
+
+    &--text {
+      font-family: $font-familyPrimary;
+      font-size: rem(18);
+      font-weight: 600;
+      text-transform: uppercase;
+      text-decoration: none;
+
+    }
+  }
+
+  &__text {
+    font-size: rem(18);
+    font-weight: 600;
+  }
+
+  &__link {
+    font-size: rem(12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $colorIcons;
+    padding-top: 5px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  &__buttonshare {
+    background-color: #00a0f5;
+    width: 181px;
+    height: 30px;
+    border-radius: 3px;
+    margin-block: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: $colorWhite;
+
+    &--icon {
+      font-size: rem(18);
+      margin-right: 9px;
+    }
+
+    &--text {
+      font-family: $font-familyPrimary;
+      font-size: rem(14);
+      text-transform: capitalize;
+    }
+  }
+}
+
+.btnOrange {
+  background-color: $colorIcons;
+  border-color: $colorIcons;
+  border: $colorIcons;
+}
+.btnGrey {
+  background-color: #d5d5d5;
+  border: #d5d5d5;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+}
+
+.shareTwitter1{
+  color: $colorGreyText;
+  border-bottom: solid 1px $colorWhiteTwo;
+}
+
+.shareTwitter2 {
+  margin-top:20px;
+}

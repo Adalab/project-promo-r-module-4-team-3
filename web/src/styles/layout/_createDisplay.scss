@@ -1,0 +1,13 @@
+.mainCreate {
+    background: linear-gradient(#f5f5f5 , $colorWhite); 
+    @media all and (min-width:768px) {
+        min-height: 80vh;
+        display:flex;
+        flex-direction: row;
+        padding: 23px 40px 21px 0px;    
+    }
+    @media all and (min-width:1024px) {
+    
+        padding: 20px 40px 20px 0px;    
+    }
+}

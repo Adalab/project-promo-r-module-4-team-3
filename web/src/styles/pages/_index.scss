@@ -1,0 +1,125 @@
+.body {
+height: 100vh;
+display: flex;
+flex-direction: column;
+}
+
+.landing {
+  min-height: 85vh;
+  padding: 95px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color:#f5f5f5;
+  @media all and (min-width: 768px) {
+    min-height: 92vh;
+    padding: 80px 100px 60px;
+    justify-content: flex-end;
+  }
+}
+
+.landingLogo {
+  width: 250px;
+  height: auto;
+/*   width: 250px;
+  height: 63px; */
+  @media all and (min-width: 768px) {
+/*     width: 419px;
+    height: 105px; */
+  }
+}
+
+.landingSection {
+  margin-top: 35.4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  @media all and (min-width: 768px) {
+    margin-top: 31px;
+  }
+
+  &__title {
+    font-family: "Merriweather", serif;
+    font-size: rem(19.2);
+    color: $colorIcons;
+    @media all and (min-width: 768px) {
+      font-size: rem(24);
+    }
+  }
+
+  &__text {
+    @include t(rem(12.8), rem(17));
+    color: $colorSubtitle;
+    width: 35ch;
+    @media all and (min-width: 768px) {
+    @include t(rem(16), rem(24));
+      }
+    }
+
+  &__container {
+    margin-top: 17.8px;
+    width: 268px;
+    height: 73.8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    border: solid 1.6px rgba(225, 115, 52, 0.21);
+    border-radius: 4px;
+    @media all and (min-width: 768px) {
+      margin-top: 27px;
+  
+      width: 325px;
+      height: 86px;
+      gap: 35px;
+      border-radius: 5px;
+    }
+    
+    &--icon {
+      font-size: rem(22.4);
+      color: $colorIcons;
+      @media all and (min-width: 768px) {
+        font-size: rem(28);
+      }
+    }
+
+    &--text {
+      font-size: rem(12.8);
+      color: $colorSubtitle;
+      width: 60px;
+      @media all and (min-width: 768px) {
+        font-size: rem(16);
+      }
+    }
+  }
+}
+
+
+.landingButton {
+  margin-top: 40px;
+  width: 129px;
+  height: 42px;
+  background-color: $colorSecondary;
+  border-radius: 21px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media all and (min-width: 768px) {
+  margin-top: 170px;
+    width: 129px;
+    height: 42px;
+  }
+
+  &__link {
+    text-decoration: none;
+    font-family: $font-familyPrimary;
+    font-size: rem(16);
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $colorWhite;
+    width: 129px;
+    height: 42px
+  } 
+}
