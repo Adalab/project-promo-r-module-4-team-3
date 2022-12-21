@@ -5,14 +5,24 @@ function Share(prop) {
   };
   return (
     <fieldset className="fieldset">
-      <legend className="js-containerLegend js-containerLegendShare containerLegend" id='3' onClick={prop.handleClickSection}>
+      <legend
+        className="js-containerLegend js-containerLegendShare containerLegend"
+        id="3"
+        onClick={prop.handleClickSection}
+      >
         <div className="legend__tab">
           <i className="fa-solid fa-share-nodes legend__tab--icon"></i>
           <h2 className="legend__tab--title">Comparte</h2>
         </div>
-        <i className={`fa-solid fa-chevron-${prop.isShareOpen ? 'up' : 'down'} legend__tab--arrow`}></i>
+        <i
+          className={`fa-solid fa-chevron-${prop.isShareOpen ? "up" : "down"
+            } legend__tab--arrow`}
+        ></i>
       </legend>
-      <div className={`shareTwitter shareTwitter1 ${prop.isShareOpen ? '' : 'hide'}`}>
+      <div
+        className={`shareTwitter shareTwitter1 ${prop.isShareOpen ? "" : "hide"
+          }`}
+      >
         <button
           className="js-btn-create shareTwitter__buttoncreate btnOrange"
           type="button"
@@ -24,8 +34,12 @@ function Share(prop) {
             Crear tarjeta
           </span>
         </button>
+        {prop.apiCard.success || <p className="shareTwitter__link">{prop.apiCard.error}</p>}
       </div>
-      <div className={`shareTwitter shareTwitter2 ${prop.apiCard.success || 'hide'}`}>
+      <div
+        className={`shareTwitter shareTwitter2 ${prop.apiCard.success || "hide"
+          }`}
+      >
         <h4 className="shareTwitter__text">La tarjeta ha sido creada:</h4>
         <a
           className="js-cardLink shareTwitter__link"
@@ -34,12 +48,15 @@ function Share(prop) {
           target="_blank"
           rel="noreferrer"
         >
-          {prop.apiCard.success ? prop.apiCard.cardURL : prop.apiCard.error}
+          {prop.apiCard.success && prop.apiCard.cardURL}
         </a>
         <a
           className="js-twitterBtn shareTwitter__buttonshare"
           title="Tu tarjeta en un tweet"
-          href={prop.apiCard.success && `https://twitter.com/intent/tweet?text=Aquí%20está%20mi%20tarjeta%20de%20visita%20creada%20con%20AdaCards&url=${prop.apiCard.cardURL}&hashtags=businesscard,adacards`}
+          href={
+            prop.apiCard.success &&
+            `https://twitter.com/intent/tweet?text=Aquí%20está%20mi%20tarjeta%20de%20visita%20creada%20con%20AdaCards&url=${prop.apiCard.cardURL}&hashtags=businesscard,adacards`
+          }
           target="_blank"
           rel="noreferrer"
         >
