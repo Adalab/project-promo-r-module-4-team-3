@@ -27,7 +27,6 @@ function App() {
   };
 
   const [palette, setPalette] = useState("palette1");
-
   const [apiCard, setApiCard] = useState({});
   const [isDesignOpen, setIsDesignOpen] = useState(true);
   const [isFillOpen, setIsFillOpen] = useState(false);

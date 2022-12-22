@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link rel="stylesheet" href="/card.scss">-->
+    <title>Card</title>
+</head>
+<body>
+    <div class="cardDisplay__card <%= palette %>">
+        <div class="titleWrap titleWrapColor">
+          <h1 class="nameCardColor cardDisplay__card--name">
+            <%= name %>
+          </h1>
+          <h3 class="cardDisplay__card--profesion">
+            <%= job %>
+          </h3>
+        </div>
+        <div class="cardDisplay__card--photo">
+            <img
+              class="cardDisplay__card--photo"
+              src="<%= photo %>"
+              alt="foto de perfil"
+            />
+        </div>
+        <ul class="cardDisplay__card--iconList">
+          <li class="cardListElement">
+            <a
+              class="iconColor cardListElement__icon telf"
+              href="<%= phone %>"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i class="fa-solid fa-mobile-screen icon"></i>
+            </a>
+          </li>
+          <li class="cardListElement">
+            <a
+              class="iconColor cardListElement__icon email"
+              href="<%= email %>"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i class="fa-regular fa-envelope"></i>
+            </a>
+          </li>
+          <li class="cardListElement">
+            <a
+              class="iconColor cardListElement__icon linkedin"
+              href="<%= linkedin %>"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i class="fa-brands fa-linkedin-in icon-dots icon"></i>
+            </a>
+          </li>
+          <li class="cardListElement">
+            <a
+              class="iconColor cardListElement__icon github"
+              href="<%= github %>"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i class="fa-brands fa-github-alt icon-dots icon"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+</body>
+</html>

@@ -11,6 +11,7 @@ const server = express();
 // Configuramos el servidor
 server.use(cors());
 server.use(express.json({ limit: "25mb" }));
+server.set('view engine', 'ejs');
 
 // Arrancamos el servidor en el puerto 3000
 const serverPort = 4000;
@@ -53,20 +54,13 @@ server.post("/card", (req, res) => {
   }
 });
 
-/*server.get('/card/id', (req, res) => {
-    const response = {
-      success: true,
-      cardURL: 'https://dev.adalab.es/card/16715326611213225',
-    };
-    res.json(response);
-  
-    const responseError = {
-      success: false,
-      error: 'Mandatory fields: name, job, email, linkedin, github, photo',
-    };
-  
-    res.json(responseError);
-  });*/
+server.get('/card/:id', (req, res) => {
+    const foundCard = savedCard.find((eachCard) => eachCard.id === req.params.id) 
+    res.render('card', foundCard);
+  });
 
 const staticServerPathWeb = "./src/public-react"; // En esta carpeta ponemos los ficheros estáticos
 server.use(express.static(staticServerPathWeb));
+
+const staticServerPathStyles = "./src/public-react-styles"; // En esta carpeta ponemos los ficheros estáticos
+server.use(express.static(staticServerPathStyles));

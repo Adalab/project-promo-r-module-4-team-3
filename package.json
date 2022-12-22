@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon src/index.js",
-    "publish-react": "cd web && npm run build && cd .. && rm -rf ./src/public-react && mv ./web/build ./src/public-react"
+    "start": "nodemon src/index.js & npm run scss",
+    "publish-react": "cd web && npm run build && cd .. && rm -rf ./src/public-react && mv ./web/build ./src/public-react",
+    "scss": "sass --watch src/public-react-styles/card.scss src/scss/main.css"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,9 @@
   "homepage": "https://github.com/Adalab/project-promo-r-module-4-team-3#readme",
   "dependencies": {
     "cors": "^2.8.5",
+    "ejs": "^3.1.8",
     "express": "^4.18.2",
+    "node-sass": "^8.0.0",
     "uuid": "^9.0.0"
   }
 }
