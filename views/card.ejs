@@ -39,7 +39,7 @@
           <li class="cardListElement">
             <a
               class="iconColor cardListElement__icon telf"
-              href="<%= phone %>"
+              href="tel:<%= phone %>"
               target="_blank"
               rel="noreferrer"
             >
@@ -49,7 +49,7 @@
           <li class="cardListElement">
             <a
               class="iconColor cardListElement__icon email"
-              href="<%= email %>"
+              href="mailto:<%= email %>"
               target="_blank"
               rel="noreferrer"
             >
@@ -59,7 +59,7 @@
           <li class="cardListElement">
             <a
               class="iconColor cardListElement__icon linkedin"
-              href="<%= linkedin %>"
+              href=`https://linkedin.com/in/<% linkedin.includes("linkedin") ? linkedin.substring(28) : <%= linkedin %> %>`
               target="_blank"
               rel="noreferrer"
             >
@@ -69,7 +69,7 @@
           <li class="cardListElement">
             <a
               class="iconColor cardListElement__icon github"
-              href="<%= github %>"
+              href="https://github.com/<%= github %>"
               target="_blank"
               rel="noreferrer"
             >

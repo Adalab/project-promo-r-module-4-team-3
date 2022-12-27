@@ -4,7 +4,9 @@
 const express = require("express");
 const cors = require("cors");
 const { v4: uuidv4 } = require("uuid");
+const Database = require('better-sqlite3');
 
+const db = new Database('./src/data/cards.db', {verbose: console.log})
 // Creamos el servidor
 const server = express();
 
@@ -39,24 +41,32 @@ server.post("/card", (req, res) => {
     res.json(responseError);
   } else {
     const newCard = {
-      id: uuidv4(),
       ...req.body,
     };
-
-    savedCard.push(newCard);
-    console.log(savedCard);
-
+    const query= db.prepare('INSERT INTO cards (palette, name, email, photo, phone, linkedin, github, job) VALUES (?, ?, ?, ?, ?, ?, ?, ?)');
+    const result = query.run(
+      newCard.palette,
+      newCard.name,
+      newCard.email,
+      newCard.photo,
+      newCard.phone,
+      newCard.linkedin,
+      newCard.github,
+      newCard.job,
+    )
+    console.log(result);
     const response = {
       success: true,
-      cardURL: `http://localhost:4000/card/${newCard.id}`,
+      cardURL: `http://localhost:4000/card/${result.lastInsertRowid}`,
     };
     res.json(response);
   }
 });
 
 server.get('/card/:id', (req, res) => {
-    const foundCard = savedCard.find((eachCard) => eachCard.id === req.params.id) 
-    res.render('card', foundCard);
+  const query= db.prepare('SELECT * FROM cards WHERE id = ?');
+  const result = query.get(req.params.id);
+  res.render('card', result);
   });
 
 const staticServerPathWeb = "./src/public-react"; // En esta carpeta ponemos los ficheros estáticos

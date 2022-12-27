@@ -38,16 +38,17 @@ function App() {
     if (dataInfo.name === "linkedin") {
       if (dataInfo.value.includes("linkedin")) {
         setCleanLinkedin(dataInfo.value.substring(28));
+        //setData({...data, linkedin: cleanLinkedin})
       } else setCleanLinkedin(dataInfo.value);
-    }
-
-    if (dataInfo.name === "github") {
+    } else if (dataInfo.name === "github") {
       if (dataInfo.value.includes("github")) {
         setCleanGithub(dataInfo.value.substring(19));
       } else setCleanGithub(dataInfo.value);
+    } else {
+      setData({ ...data, [dataInfo.name]: dataInfo.value });
     }
-
-    setData({ ...data, [dataInfo.name]: dataInfo.value });
+    
+    // setData({...data, linkedin: cleanLinkedin})
   };
 
   const handleReset = (ev) => {
