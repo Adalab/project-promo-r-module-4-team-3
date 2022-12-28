@@ -44,10 +44,8 @@ function App() {
       if (dataInfo.value.includes("github")) {
         setCleanGithub(dataInfo.value.substring(19));
       } else setCleanGithub(dataInfo.value);
-    } else {
-      setData({ ...data, [dataInfo.name]: dataInfo.value });
-    }
-    
+    } 
+    setData({ ...data, [dataInfo.name]: dataInfo.value });
     // setData({...data, linkedin: cleanLinkedin})
   };
 

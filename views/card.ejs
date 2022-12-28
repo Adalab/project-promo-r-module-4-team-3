@@ -59,7 +59,7 @@
           <li class="cardListElement">
             <a
               class="iconColor cardListElement__icon linkedin"
-              href=`https://linkedin.com/in/<% linkedin.includes("linkedin") ? linkedin.substring(28) : <%= linkedin %> %>`
+              href='https://linkedin.com/in/<%= linkedin.includes("linkedin") ? linkedin.substring(28) : linkedin %>'
               target="_blank"
               rel="noreferrer"
             >
@@ -69,7 +69,7 @@
           <li class="cardListElement">
             <a
               class="iconColor cardListElement__icon github"
-              href="https://github.com/<%= github %>"
+              href= 'https://github.com/<%= github.includes("github") ? github.substring(19) : github %>'
               target="_blank"
               rel="noreferrer"
             >
