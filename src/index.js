@@ -15,14 +15,10 @@ server.use(cors());
 server.use(express.json({ limit: "25mb" }));
 server.set('view engine', 'ejs');
 
-console.log(process.env);
-// Arrancamos el servidor en el puerto 3000
-const serverPort = 4000;
+const serverPort = process.env.PORT || 4000;
 server.listen(serverPort, () => {
   console.log(`Server listening at http://localhost:${serverPort}`);
 });
-
-const savedCard = [];
 
 // Escribimos los endpoints que queramos
 server.post("/card", (req, res) => {
@@ -58,7 +54,7 @@ server.post("/card", (req, res) => {
     console.log(result);
     const response = {
       success: true,
-      cardURL: `http://localhost:4000/card/${result.lastInsertRowid}`,
+      cardURL: `https://project-promo-r-module-4-team-3-production.up.railway.app/card/${result.lastInsertRowid}`,
     };
     res.json(response);
   }
