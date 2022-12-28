@@ -15,6 +15,7 @@ server.use(cors());
 server.use(express.json({ limit: "25mb" }));
 server.set('view engine', 'ejs');
 
+console.log(process.env);
 // Arrancamos el servidor en el puerto 3000
 const serverPort = 4000;
 server.listen(serverPort, () => {
