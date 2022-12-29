@@ -37,6 +37,7 @@ function Card(prop) {
             apiCard={prop.apiCard}
             handleClickFetch={prop.handleClickFetch}
             isShareOpen={prop.isShareOpen}
+            isLinkSeen={prop.isLinkSeen}
             handleClickSection={prop.handleClickSection}
           />
         </form>

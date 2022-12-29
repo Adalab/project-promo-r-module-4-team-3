@@ -37,7 +37,7 @@ function Share(prop) {
         {prop.apiCard.success || <p className="shareTwitter__link">{prop.apiCard.error}</p>}
       </div>
       <div
-        className={`shareTwitter shareTwitter2 ${prop.apiCard.success || "hide"
+        className={`shareTwitter shareTwitter2 ${prop.apiCard.success && prop.isLinkSeen ? "" : "hide"
           }`}
       >
         <h4 className="shareTwitter__text">La tarjeta ha sido creada:</h4>
