@@ -31,6 +31,7 @@ function App() {
   const [isDesignOpen, setIsDesignOpen] = useState(true);
   const [isFillOpen, setIsFillOpen] = useState(false);
   const [isShareOpen, setIsShareOpen] = useState(false);
+  const [isLinkSeen, setIsLinkSeen] = useState(true);
   const [cleanLinkedin, setCleanLinkedin] = useState("");
   const [cleanGithub, setCleanGithub] = useState("");
 
@@ -63,6 +64,10 @@ function App() {
     });
     setPalette("palette1");
     setAvatar("");
+    setIsDesignOpen(true);
+    setIsFillOpen(false);
+    setIsShareOpen(false);
+    setIsLinkSeen(false);
   };
 
   const handleClickFetch = () => {
@@ -108,6 +113,7 @@ function App() {
         cleanGithub={cleanGithub}
         updateAvatar={updateAvatar}
         avatar={avatar}
+        isLinkSeen={isLinkSeen}
       />}></Route>
       </Routes>
       <Footer />
